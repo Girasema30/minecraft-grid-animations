@@ -1,0 +1,320 @@
+body{
+    margin: 0 40px;
+    background: url(/Rutas/img/pandas-minecraft.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-attachment: fixed;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 1.2rem;
+    line-height: 1.6em
+}
+
+.header{
+    background-image: url(/Rutas/img/pandas-minecraf-encabezado-palnav3.jpg);
+    background-size: 100%;
+    padding: 2rem 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    font-size: 1.5rem;
+}
+
+header a{
+    color: cornsilk;
+    text-decoration: none;
+}
+
+.container{
+    width: 85%;
+    max-width: 850px;
+    margin: 0 auto;
+}
+
+.logo-nav-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-nav{
+    letter-spacing: 15px;
+    font-size: 1.4em;
+}
+
+.navigation ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.navigation ul li{
+    display: inline-block;
+}
+
+.navigation ul li a{
+    padding: 0.5rem 1rem;
+    transition: all 0.4s linear;
+    border-radius: 5px;
+}
+
+.navigation ul li a:hover{
+    background-color: rgb(2, 102, 2);
+}
+
+.main{
+    padding-top: 7rem;
+}
+
+h1{
+    text-align: center;
+    text-shadow: rgb(29, 27, 27);
+    color: rgb(238, 65, 34);
+    font-family: 'Times New Roman', Times, serif;
+}
+
+h3{
+    text-align: center;
+}
+
+hr{
+    color: tomato;
+    size: 3px;
+    grid-area: hr;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-areas: "hr hr hr hr hr"
+                         "titulo titulo titulo titulo titulo"
+                         "cuerpo1 cuerpo1 cuerpo1 aside aside"
+                         "cuerpo2 cuerpo2 cuerpo2 aside aside"
+                         "cuerpo3 cuerpo3 cuerpo3 aside aside"
+                         "articulo1 articulo2 articulo3 articulo4 articulo5"
+                         "footer footer footer footer footer";
+}
+
+.titulo{
+    background: rgb(255, 189, 199);
+    grid-area: titulo;
+    margin: 10px;
+    border-radius: 7px;
+    animation-name: mover-titulo;
+    animation-duration: 4s;
+    animation-direction: alternate;
+    animation-iteration-count: 2;
+}
+
+.titulo > h3 {
+    text-align: center;
+}
+
+.cuerpo1{
+    background: rgb(15, 180, 172);
+    grid-area: cuerpo1;
+}
+
+.cuerpo2{
+    background: rgb(235, 147, 137);
+    grid-area: cuerpo2;
+}
+
+.cuerpo3{
+    background: rgb(142, 126, 247);
+    grid-area: cuerpo3;
+}
+
+.aside{
+    background: rgb(184, 178, 178);
+    grid-area: aside;
+    text-align: center;
+    margin: 10px;
+    padding: 20px;
+    border-radius: 7px;
+    animation-name: color-aside-diagonal;
+    animation-duration: 1.5s;
+    animation-iteration-count: 4;
+    animation-direction: alternate;
+}
+
+.articulo1{
+    background: rgb(249, 252, 117);
+    grid-area: articulo1;
+}
+
+.articulo2{
+    background: rgb(255, 255, 29);
+    grid-area: articulo2;
+}
+
+.articulo3{
+    background: rgb(231, 110, 231);
+     grid-area: articulo3;
+}
+
+.articulo4{
+    background: rgb(255, 255, 29);
+     grid-area: articulo4;
+}
+
+.articulo5{
+    background: rgb(249, 252, 117);
+     grid-area: articulo5;
+}
+
+.footer{
+    background: rgb(252, 125, 102);
+    grid-area: footer;
+    text-align: left;
+    margin: 15px;
+    border-radius: 5px;
+    padding-left: 15px;
+    animation-name: mover-footer;
+    animation-duration: 4s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+}
+
+.cuerpo1, .cuerpo2, .cuerpo3{
+    text-align: justify;
+    margin: 10px;
+    padding: 20px;
+    border-radius: 7px;
+    padding: 45px;
+    animation-name: zoom-cuerpos;
+    animation-duration: 2s;
+    animation-iteration-count: 4;
+    animation-direction: alternate;
+}
+
+.articulo1, .articulo2, .articulo3, .articulo4, .articulo5{
+    text-align: center;
+    margin: 15px;
+    border-radius: 7px;
+    margin-top: 23px;
+    padding: 5px;
+    animation-name: right-left-articulos;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes mover-titulo {
+    0%{
+        background: rgba(255, 189, 199, 0);
+        transform: translateX(0%);
+    }
+
+    20%{
+        background: rgba(255, 189, 199, 0.411);
+        transform: translateX(2.5%);
+    }
+
+    40%{
+        background: rgba(255, 189, 199, 0.637);
+        transform: translateX(-2.5%);
+    }
+
+    60%{
+        background: rgba(255, 189, 199, 0.883);
+        transform: translatey(-60%);
+    }
+
+    80%{
+        background: rgb(255, 189, 199);
+    }
+
+    100%{
+        background: rgba(255, 189, 199, 0.637);
+        transition: 1s;
+    }
+}
+
+@keyframes right-left-articulos {
+    from{
+        transform: translateX(5%);
+    }
+
+    to{
+        transform: translateX(-5%);
+    }
+}
+
+@keyframes color-aside-diagonal {
+    0%{
+        background: rgba(184, 178, 178, 0.212);
+        transform: translateX(0);
+    }
+
+    20%{
+        background: rgba(184, 178, 178, 0.418);
+    }
+
+    40%{
+        background: rgba(184, 178, 178, 0.541);
+    }
+
+    60%{
+        background: rgba(184, 178, 178, 0.705);
+    }
+
+    80%{
+        background: rgba(184, 178, 178, 0.835);
+    }
+
+    100%{
+        background: rgb(184, 178, 178);
+        transform: translateY(5%) translateX(5%);
+    }
+}
+
+@keyframes zoom-cuerpos {
+    0%{
+        margin: 10px;
+        padding: 45px;
+        border-radius: 7px;
+    }
+
+    50%{
+        margin: 20px;
+        padding: 20px;
+        border-radius: 34px;
+    }
+
+    100%{
+        margin: 10px;
+        padding: 45px;
+        border-radius: 7px;
+    }
+}
+
+@keyframes mover-footer {
+    0%{
+        background: rgba(255, 189, 199, 0);
+        transform: translateX(0%);
+    }
+
+    20%{
+        background: rgba(236, 134, 116, 0.705);
+        transform: translateX(2.5%);
+    }
+
+    40%{
+        background: rgba(252, 125, 102, 0.637);
+        transform: translateX(-2.5%);
+    }
+
+    60%{
+        background: rgba(252, 125, 102, 0.883);
+        transform: translatey(-40%);
+    }
+
+    80%{
+        background: rgb(252, 125, 102);
+    }
+
+    100%{
+        background: rgba(252, 125, 102, 0.781);
+        transition: 1s;
+    }
+}
