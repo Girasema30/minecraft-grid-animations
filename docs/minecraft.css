@@ -1,6 +1,6 @@
 body{
     margin: 0 40px;
-    background: url(/Rutas/img/pandas-minecraft.jpg);
+    background: url(img/pandas-minecraft.jpg);
     background-repeat: no-repeat;
     background-size: 100%;
     background-attachment: fixed;
@@ -10,7 +10,7 @@ body{
 }
 
 .header{
-    background-image: url(/Rutas/img/pandas-minecraf-encabezado-palnav3.jpg);
+    background-image: url(img/pandas-minecraf-encabezado-palnav3.jpg);
     background-size: 100%;
     padding: 2rem 0;
     position: fixed;
